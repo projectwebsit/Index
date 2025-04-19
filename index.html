@@ -3,10 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
+    <title>Sunset Hotel</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        .room {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, world!</h1>
-    <p>This is my first website hosted on GitHub Pages.</p>
+
+<header>
+    <h1>Welcome to Sunset Hotel</h1>
+    <p>Your perfect getaway destination</p>
+</header>
+
+<nav>
+    <a href="#rooms">Rooms</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="rooms">
+    <h2>Our Rooms</h2>
+    <div class="room">
+        <h3>Standard Room</h3>
+        <p>Comfortable and affordable with free WiFi.</p>
+    </div>
+    <div class="room">
+        <h3>Deluxe Suite</h3>
+        <p>Spacious suite with sea view, king bed, and breakfast included.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <label for="name">Name:</label><br/>
+        <input type="text" id="name" name="name"><br/><br/>
+        <label for="email">Email:</label><br/>
+        <input type="email" id="email" name="email"><br/><br/>
+        <label for="message">Message:</label><br/>
+        <textarea id="message" name="message" rows="4"></textarea><br/><br/>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 Sunset Hotel. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
