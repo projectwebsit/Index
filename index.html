@@ -17,6 +17,19 @@
             text-align: center;
             height: 200px;
         }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+            z-index: 0;
+        }
+        header h1, header p, header button {
+            position: relative;
+        z-index: 1;
+        }
+
         header button {
             margin-top: 15px;
             padding: 10px 20px;
@@ -48,11 +61,23 @@
         section {
             padding: 40px 20px;
         }
+        #rooms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        #rooms h2 {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
         .room {
             border: 1px solid #ddd;
             padding: 15px;
-            margin: 10px 0;
-        }
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+       }
         .room button {
             margin-top: 10px;
             padding: 8px 16px;
@@ -115,7 +140,7 @@
     <h2>Our Rooms</h2>
     <div class="room">
         <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Suite Room" style="width:100%; max-width:600px;">
-        <h3>Standard Room</h3>
+        <h3 style="color: green;">Standard Room</h3>
         <p>Comfortable and affordable with free WiFi.</p>
         <p class="price">Rs.2000/per day</p>
         <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
@@ -125,7 +150,7 @@
     </div>
     <div class="room">
         <img src="https://img.freepik.com/free-photo/3d-rendering-luxury-modern-bedroom-suite-hotel-with-tv-cabinet_105762-2276.jpg?semt=ais_hybrid&w=740" alt="Deluxe Suite" style="width:100%; max-width:600px;">
-        <h4>Deluxe Suite</h4>
+        <h3 style="color: green;">Deluxe Suite</h3>
         <p>Enjoy luxury and comfort with our Deluxe Suite featuring a king-size bed, city view, and modern amenities.</p>
         <p class="price">Rs.3000/per day</p>
         <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
@@ -134,7 +159,7 @@
     </div>
     <div class="room">
         <img src="https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bHV4dXJ5JTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Executive Room" style="width:100%; max-width:600px;">
-        <h4 style="color: green;">Executive Room</h4>
+        <h3 style="color: green;">Executive Room</h3>
         <p>Enjoy our executive but elegant room.</p>
         <p class="price">Rs.2000/per day</p>
         <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
@@ -158,6 +183,14 @@
 <footer>
     <p>© 2025 Hotel Paradise. All rights reserved.</p>
 </footer>
+<script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent page reload
+    alert("Thank you! Your message has been sent.");
+    this.reset(); // Optional: clear the form
+  });
+</script>
+
 
 </body>
 </html>
