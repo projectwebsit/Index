@@ -79,6 +79,45 @@
         .price {
             color: red;
             font-weight: bold;
+            #specializations {
+            padding: 40px 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+    }
+
+        #specializations h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+    }
+
+        .specialization {
+           display: inline-block;
+            width: 22%;
+            margin: 0 15px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .specialization:hover {
+            transform: translateY(-10px);
+        }
+
+        .specialization h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+          .specialization p {
+            font-size: 1rem;
+            color: #777;
+            margin-top: 10px;
+        }
+
         }
         form {
             max-width: 500px;
@@ -129,6 +168,7 @@
 
 <nav>
     <a href="#rooms">Rooms</a>
+    <a href="#specializations">Our Specializations</a>
     <a href="#contact">Contact</a>
 </nav>
 
@@ -154,29 +194,53 @@
         </button>
     </div>
     <div class="room">
-        <img src="https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bHV4dXJ5JTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Executive Room" style="width:100%; max-width:600px;">
+        <img src="https://images.unsplash.com/photo-1566195992011-5f6b21e539aa?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Executive Room" style="width:100%; max-width:600px;">
         <h3 style="color: green;">Executive Room</h3>
-        <p>Enjoy our executive but elegant room.</p>
+        <p>Enjoy our executive but elegant room with a cozy bed and warm lighting</p>
         <p class="price">Rs.2000/per day</p>
         <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
          Book Now
         </button>
     </div>
 </section>
+    <section id="specializations">
+    <h2>Our Specializations</h2>
+    <div class="specialization">
+        <h3>Luxury Rooms</h3>
+        <p>Our luxury rooms offer the ultimate comfort with premium furnishings, spectacular views, and state-of-the-art facilities.</p>
+    </div>
+    <div class="specialization">
+        <h3>Gourmet Dining</h3>
+        <p>Experience world-class cuisine prepared by our talented chefs using the finest local ingredients in a sophisticated setting.</p>
+    </div>
+    <div class="specialization">
+        <h3>Wellness & Spa</h3>
+        <p>Relax and rejuvenate at our luxurious spa, offering a range of treatments designed to pamper you from head to toe.</p>
+    </div>
+    <div class="specialization">
+        <h3>Event Hosting</h3>
+        <p>Whether it's a wedding, corporate event, or private party, we offer elegant event spaces and expert planning services.</p>
+    </div>
+</section>
 <section id="contact">
-    <h2>Contact Us</h2>
+    <h2>Book Now</h2>
     <form>
         <label for="name">Name:</label><br/>
         <input type="text" id="name" name="name"><br/><br/>
         <label for="email">Email:</label><br/>
         <input type="email" id="email" name="email"><br/><br/>
-        <label for="message">Message:</label><br/>
-        <textarea id="message" name="message" rows="4"></textarea><br/><br/>
-        <button type="submit">Send</button>
+        <label for="room-name">Room Name:</label><br/>
+        <input type="text" id="room-name" name="room-name"><br/><br/>
+        <label for="days">Number of Days:</label><br/>
+        <input type="number" id="days" name="days" min="1" max="365" required><br/><br/>
+        <button type="submit">Submit
+        </button>
     </form>
 </section>
-
 <footer>
+    <h2>Contact Us</h2>
+    <p>Telephone:+91 435231465</p>
+    <p>Email:hotelparadise@gmail.com</p>
     <p>© 2025 Hotel Paradise. All rights reserved.</p>
 </footer>
 <script>
@@ -186,7 +250,5 @@
     this.reset(); // Optional: clear the form
   });
 </script>
-
-
 </body>
 </html>
