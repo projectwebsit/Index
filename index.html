@@ -27,7 +27,7 @@
         }
         header h1, header p, header button {
             position: relative;
-        z-index: 1;
+            z-index: 1;
         }
 
         header button {
@@ -61,23 +61,16 @@
         section {
             padding: 40px 20px;
         }
-        #rooms {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
         #rooms h2 {
             grid-column: 1 / -1;
             text-align: center;
             margin-bottom: 20px;
         }
-
-        .room {
+       .room {
             border: 1px solid #ddd;
             padding: 15px;
             background-color: #fff;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-       }
+        }
         .room button {
             margin-top: 10px;
             padding: 8px 16px;
@@ -95,15 +88,26 @@
             color: red;
             font-weight: bold;
         }
-        form input, form textarea {
-            width: 100%;
-            max-width: 400px;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+        form {
+            max-width: 500px;
+            margin: 0 auto;
         }
-        form button {
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+      form button {
             padding: 10px 20px;
             background-color: #333;
             color: white;
