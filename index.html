@@ -17,6 +17,20 @@
             text-align: center;
             height: 200px;
         }
+        header button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #fce303;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        header button:hover {
+            background-color: #ffd700;
+        }
+
         nav {
             background: #333;
             display: flex;
@@ -39,9 +53,41 @@
             padding: 15px;
             margin: 10px 0;
         }
+        .room button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .room button:hover {
+            background-color: #555;
+        }
+
         .price {
             color: red;
             font-weight: bold;
+        }
+        form input, form textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #555;
         }
         footer {
             background: #333;
@@ -55,6 +101,9 @@
 <header>
     <h1>Welcome to Hotel Paradise</h1>
     <p>Your perfect destination for rooms</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
+        Book Now
+    </button>
 </header>
 
 <nav>
@@ -68,20 +117,30 @@
         <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Suite Room" style="width:100%; max-width:600px;">
         <h3>Standard Room</h3>
         <p>Comfortable and affordable with free WiFi.</p>
-        <p>Rs.2000/per night</p>
+        <p class="price">Rs.2000/per day</p>
+        <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
+          Book Now
+        </button>
+
     </div>
     <div class="room">
         <img src="https://img.freepik.com/free-photo/3d-rendering-luxury-modern-bedroom-suite-hotel-with-tv-cabinet_105762-2276.jpg?semt=ais_hybrid&w=740" alt="Deluxe Suite" style="width:100%; max-width:600px;">
         <h4>Deluxe Suite</h4>
         <p>Enjoy luxury and comfort with our Deluxe Suite featuring a king-size bed, city view, and modern amenities.</p>
-        <p>Rs.3000/per night</p>
+        <p class="price">Rs.3000/per day</p>
+        <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
+        Book Now
+        </button>
     </div>
     <div class="room">
         <img src="https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bHV4dXJ5JTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Executive Room" style="width:100%; max-width:600px;">
         <h4 style="color: green;">Executive Room</h4>
         <p>Enjoy our executive but elegant room.</p>
         <p class="price">Rs.2000/per day</p>
-     </div>
+        <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
+         Book Now
+        </button>
+    </div>
 </section>
 <section id="contact">
     <h2>Contact Us</h2>
